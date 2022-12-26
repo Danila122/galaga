@@ -1,0 +1,508 @@
+
+/* обнуление css */
+
+*{
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow:  hidden; 
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+img{
+  display: inline-block;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  position: relative;
+  width: 100%;
+  color: #000;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: 'joystix';
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+input,
+button,
+textarea {
+  font-family: 'joystix';
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* подключаем шрифт ================================================================= */
+
+@font-face {
+	font-family: 'joystix';
+	src: url('../fonts/joystix.eot');
+	src: local('joystix'), url('../fonts/joystix.woff') format('woff'), url('../fonts/joystix.ttf') format('truetype'), url('../fonts/joystix.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* ============================================== */
+
+#app{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  font-weight: bold;
+  color: #fff;
+  
+  letter-spacing: 1px;
+  font-size: 25px;
+  background-color: #000;
+}
+
+
+#starrySky{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.app__container{
+  margin: 10px 10px;
+  min-width: 700px;
+
+}
+
+.app__loader{
+  text-align: center;
+}
+
+.app__loader img{
+  width: 100px;
+  height: 100px;
+}
+
+
+.app__body{
+  height: 800px;
+  position: relative;
+}
+
+.app__content{
+  width: 100%;
+  height: 100%;
+}
+
+
+.page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-body{
+  color: #14F5D4;
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.title{
+  font-size: 30px;
+  color: #BE1412;
+  margin: 0px 0px 30px 0px;
+}
+
+.text{
+  max-height: 600px ;
+}
+
+
+
+.homePage-btn{
+  font-size: 15px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  
+}
+
+.homePage-btn::before{
+  content: '\1F844';
+  padding: 0px 10px 0px 0px;
+}
+
+
+.homePage-btn:hover{
+  color: #F7FF2B;
+}
+
+/* <Header>================================ */
+
+.header{
+  position: relative;
+}
+
+.header h2{
+  color: red;
+}
+
+.header__points {
+  position: absolute;
+  left: 0;
+  text-align:center;
+}
+
+.header__high-score {
+  text-align: center;
+}
+
+/* </Header>================================ */
+
+/* <Footer>================================ */
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+}  
+
+.footer__hit-points {
+  display:  flex;
+}
+
+.footer__hit-points img{
+  width: 40px;
+  height: 35px;
+  margin: 0px 5px 0px 0px;
+}
+
+.footer__level {
+  display: flex;
+}
+
+/* </Footer>================================ */
+
+
+/* <Main page>======================== */
+
+
+.menu a:hover{
+  color: #F7FF2B;
+}
+
+.menu__item{
+  margin: 0px 0px 40px 0px;
+}
+
+.main__user-info{
+  color: #fff;
+  margin: 0px 0px 50px 0px;
+}
+
+/* </Main>======================== */
+
+
+
+/* <Game page>============================================== */
+
+.game{
+  letter-spacing: 3px;
+  color: #14F5D4;
+}
+
+/* </Game page>============================================== */
+
+
+/* <Records page>============================================== */
+
+
+.records__body {
+  width: 500px;
+}
+
+.records__body table{
+  width: 100%;
+}
+
+.records__body thead{
+  color: #fff;
+}
+
+.records__body table td{
+  padding: 0px 0px 15px 0px;
+}
+
+.records__body tbody td:nth-child(1){
+  padding: 0px 20px 15px 0px;
+}
+
+/* </Records page>============================================== */
+
+/* <Rules page>============================================== */
+
+.rules__body{
+  width: 550px;
+  font-size: 22px;
+}
+
+.rules__body p{
+  margin: 0px 0px 10px 0px;
+}
+
+.rules thead{
+  color: white;
+}
+
+.rules table {
+  margin: 20px 0px 0px 0px;
+  width: 100%;
+} 
+
+.rules table td{
+  text-align: center;
+} 
+
+.rules tbody td{
+  padding: 0px 0px 10px 0px;
+}
+
+.rules table img{
+  width: 40px; 
+}
+
+/* </Rules page>============================================== */
+
+/* <Control page>============================================== */
+
+.control__body{
+  width: 600px;
+}
+
+.control__text{
+  width: 100%;
+}
+
+.control__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 30px 0px;
+}
+
+.control__buttons{
+  display: flex;
+  align-items: center;
+}
+
+.control__button{
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 8px 15px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#282828,#202020);
+  box-shadow: inset -8px 0 8px rgba(0,0,0,0.15),
+  inset 0 -8px 8px rgba(0,0,0,0.25),
+  0 0 0 2px rgba(0,0,0,0.75),
+  10px 20px 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+.control__button i {
+  position: relative;
+  color: #fff;
+  font-style: normal;
+}
+
+.control__button::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  background: linear-gradient(90deg,#232323,#4a4a4a);
+  border-radius: 10px;
+  box-shadow: -10px -10px 10px rgba(255,255,255,0.25),
+  10px 5px 10px rgba(0,0,0,0.15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+
+.control .space{
+  padding: 20px 0px 0px 25px;
+  font-size: 20px;
+  width: 150px;
+}
+
+.control .arrow{
+  padding: 15px 0px 0px 15px;
+  font-size: 40px;
+}
+/* </Control page>============================================== */
+
+
+/* <Result page>============================================== */
+
+.result__body {
+  color: #F7FF2B;
+}
+
+.result__body table{
+  width: 500px;
+}
+
+.result__body td{
+  padding: 15px 0px;
+}
+
+.result__body table tr:last-child{
+  color: #fff;
+}
+
+/* </Result page>============================================== */
+
+/* <UserInfo page>============================================== */
+
+.userInfo__body{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.userInfo__body img{
+  width: 400px;
+}
+
+.userInfo__body form{
+  margin: 20px 0px 0px 0px;
+}
+
+.userInfo__body input{
+  width: 100%;
+  font-size: 25px;
+  color: #14F5D4;
+  background-color: rgba(0,0,0,0);
+  border-bottom: 1px solid #14F5D4;
+  padding: 0px 0px 10px 20px;
+  margin: 30px 0px 0px 0px;
+  font-weight: bold;
+}
+
+.userInfo__body input::placeholder{
+ 
+  color: #14F5D4;
+  background-color: transparent;
+
+}
+.userInfo__submit-button{
+  font-size: 30px;
+  color: red;
+  width: 100%;
+  font-weight: bold;
+  padding: 5px;
+  margin: 30px 0px 0px 0px;
+}
+
+.error-message{
+  color: red;
+  font-size: 15px;
+}
+
+/* </UserInfo page>============================================== */
+
+
+
+
+
